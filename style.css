@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&family=Dosis&family=Inter&family=Poppins:wght@300&family=Radio+Canada&family=Roboto:ital,wght@0,300;1,300&family=Tektur:wght@700&family=Viaoda+Libre&display=swap');
+
+
+:root {
+  --cor-de-fundo: #181f56ff;
+  --cor-menu: #074a98ff;
+  --cor-destaque: #d41108ff;
+  --cor-texto: white;
+  --cor-menu-hover: color-mix(in srgb, var(--cor-menu), white 50%);
+  --cor-hamburger: #c4d3e7ff;
+}
+
+html{
+    font-family: Roboto; 
+}
+
+
+.header{
+    text-align: center;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    background-image: linear-gradient(to bottom, var(--cor-de-fundo), var(--cor-menu));
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.header_logo{
+    width: 7em;
+    height: auto;
+    padding: 1.2rem 0 .5rem; 
+    box-sizing: border-box; 
+    
+}
+
+.header-nav{
+    display: none;   
+}
+
+.header-nav.show{
+  display: block;
+}
+
+.header-nav ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+ 
+}
+.header-nav a{
+    text-decoration: none;
+    color: var(--cor-texto);
+    font-size: .7rem;
+    letter-spacing: .1rem;
+    font-weight: bold;
+    display: block;
+    padding: 1em .6em;
+    box-sizing: border-box;
+  }
+
+  .header-nav a:hover{
+    background-color: color-mix(in srgb,var(--cor-menu), var(--cor-texto) 50%);
+    color: var(--cor-destaque);
+  }
+
+  .top-header img{
+    width: 3em;
+  }
+
+  #hamburger{
+    background-color: var(--cor-hamburger);
+    display: block;
+    width: 100%;
+    color: var(--cor-hamburger);
+    cursor: pointer;
+    font-size: 1.8rem;
+    box-sizing: border-box;
+    border:var(--cor-hamburger) 2px solid;
+  }
+
+  .menu{
+    border-radius: var(--cor-destaque) 1px solid;
+    border-radius: .1em;
+    background-color:var(--cor-destaque);
+  }
+
+  main{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .bg{
+    background-image: url(imagens/bg_mario_bros_vertical_opacity_smaller.png);
+    background-position: center top;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    margin-top: 5em;
+   
+  }
+
+  .content_container{
+    background-color: var(--cor-de-fundo);
+    display: flex;
+    justify-content: center;
+    padding: 1.2em;
+    
+  }
+  .btn_trailer{
+    text-decoration: none;
+    color: var(--cor-texto);
+    display: block;
+    border: var(--cor-destaque) 2px solid;
+    border-radius: 1.5em;
+    padding: .6em;
+    width: max-content;
+    font-size: 1em;
+  }
+
+  .frame_trailer{
+    display: none;
+  }
+
+
+  .footer{
+    text-align: center;
+    padding: .5em;
+    background-color: var(--cor-hamburger);
+  }
+
+  .icons{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+   
+
+  .footer img{
+    width: 2em;
+    padding-top: 1em;
+  }
+  
+  .footer p{
+    margin-top: 1em;
+    font-size: 1em;
+  }
+
+  @media screen and (min-width: 38em){
+    
+    
+  .bg {
+    background-image: url(imagens/bg_mario_bros_horizontal_opacity.png);
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center left;
+    margin-top: 2em;
+    padding-top: 13em;
+    position: relative; 
+  }
+    
+  .header-nav{
+    display: block;   
+  }
+
+  #hamburger{
+    display: none;
+  }
+  .header{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; 
+    background-image: linear-gradient(to right, #743087ff, #074a98ff);
+  }
+
+  #itens_menu{
+    margin-right: 2em;
+  }
+
+  #itens_menu li{
+    display: inline-block;
+  }
+
+  .top-header{
+    margin-left: 2em;
+  }
+    
+  .header-nav a:hover{
+    outline: var(--cor-destaque) 2px solid;
+    background-color: transparent;
+    color: var(--cor-texto);
+    border-radius: 1em;
+  }
+
+  .frame_trailer {
+    display: block;
+    border-radius: 2em;
+    box-shadow: 2px 2px 5px;
+    width: 100%;
+    max-width: 500px;
+    position: absolute;
+    top: 50%; 
+    transform: translateY(-50%); 
+    right: 3em; 
+  }
+  
+    .content_container{
+      display: none;
+    }
+    
+    .footer .icons{
+     flex-direction: row;
+    }
+
+    .icons a{
+      display: inline-block;
+      padding: 0 1em;
+      box-sizing: border-box;
+    }
+
+    .footer img{
+      padding-top: 1em;
+      width: 2em;
+    }
+  }
+  
+ 
